@@ -1,0 +1,20 @@
+
+insert into sc_sindhu.relation(fname,frelation)values('nandana','sis');
+insert into sc_sindhu.relation(fname,frelation)values('null','0');
+
+
+select * from sc_sindhu.relation where fname is not null;
+
+2 ----zeros and 1 null in family table
+1---- zero and 1 null in relation table
+
+select distinct(fname,fage,fnumber) from sc_sindhu.family
+
+
+select * from sc_sindhu.family f inner join sc_sindhu.relation r on f.fname=r.fname;
+
+select * from sc_sindhu.family f left join sc_sindhu.relation r on f.fname=r.fname;
+
+select * from sc_sindhu.family f right join sc_sindhu.relation r on f.fname=r.fname;
+
+select * from sc_sindhu.family f full  join sc_sindhu.relation r on f.fname=r.fname;
